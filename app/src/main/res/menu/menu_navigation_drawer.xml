@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_kamus"
+            android:checkable="false"
+            android:icon="@drawable/ic_kamus"
+            android:title="Kamus" />
+        <item
+            android:id="@+id/nav_bookmark"
+            android:checkable="false"
+            android:icon="@drawable/ic_bookmark"
+            android:title="Bookmark" />
+        <item
+            android:id="@+id/nav_history"
+            android:checkable="false"
+            android:icon="@drawable/ic_history"
+            android:title="History" />
+
+        <item android:title="Lainnya">
+            <menu>
+                <item
+                    android:id="@+id/nav_app_lain"
+                    android:icon="@drawable/ic_app_lainnya"
+                    android:title="Aplikasi Lainnya" />
+
+                <item
+                    android:id="@+id/nav_info_app"
+                    android:icon="@drawable/ic_app_info"
+                    android:title="Info Aplikasi Ini" />
+            </menu>
+        </item>
+
+    </group>
+</menu>

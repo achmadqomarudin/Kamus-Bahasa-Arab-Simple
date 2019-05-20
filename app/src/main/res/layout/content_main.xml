@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical|center"
+    android:orientation="vertical">
+
+    <!--<include-->
+        <!--android:id="@+id/search"-->
+        <!--layout="@layout/activity_search" />-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cari"
+        app:cardElevation="5dp"
+        android:elevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="142dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_alignParentBottom="true"
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="search"
+                android:src="@android:drawable/ic_menu_search"
+                android:text="Search"
+                android:background="@android:color/transparent"
+                android:layout_alignParentEnd="true" />
+
+            <ImageButton
+                android:layout_alignParentTop="true"
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="search"
+                android:src="@android:drawable/ic_delete"
+                android:text="Search"
+                android:background="@android:color/transparent"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:id="@+id/searchText"
+                android:paddingLeft="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:imeOptions="actionSearch"
+                android:onClick="search"
+                android:maxLines="3"
+                android:textColor="@android:color/black"
+                android:backgroundTint="@android:color/white"
+                android:layout_toLeftOf="@+id/searchButton"
+                android:hint="tulis kata yang dicari..."
+                android:inputType="textNoSuggestions" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/cari"
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:drawSelectorOnTop="false"
+        android:gravity="center_vertical|center" />
+
+</RelativeLayout>
